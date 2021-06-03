@@ -17,7 +17,7 @@ public class VehicleLatLongGenerator {
 
     // private Random random = new Random();
 
-    @Outgoing("generated-price")
+    @Outgoing("vehicle-out")
     public Multi<Vehicle> generate() {
         return Multi.createFrom().ticks().every(Duration.ofSeconds(5)).onOverflow().drop().map(tick -> {
             Random random = new Random();
