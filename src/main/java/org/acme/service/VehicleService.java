@@ -12,10 +12,7 @@ import org.redisson.api.GeoOrder;
 import org.redisson.api.GeoUnit;
 import org.redisson.api.RGeo;
 import org.redisson.api.RMap;
-import org.redisson.api.RMapReactive;
 import org.redisson.api.geo.GeoSearchArgs;
-
-import io.smallrye.mutiny.Multi;
 
 @ApplicationScoped
 public class VehicleService {

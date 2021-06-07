@@ -19,7 +19,7 @@ import org.junit.jupiter.api.Test;
 import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
-public class SnippetsTest {
+public class TestCaseForGraphTriesDate {
 
     // Rate limiter test
     @Test

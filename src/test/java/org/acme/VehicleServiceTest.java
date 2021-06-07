@@ -2,8 +2,13 @@ package org.acme;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.IntStream;
 
@@ -75,6 +80,24 @@ public class VehicleServiceTest {
     @Test
     public void testBookWith10ConcurrentThreads() {
         // Creat threads and see that no two people book the same vehcile
+        try {
+            ExecutorService WORKER_THREAD_POOL = Executors.newFixedThreadPool(1000);
+            List<Callable<String>> tasks = new ArrayList<>();
+
+            for (int i = 0; i < 1000; i++) {
+                tasks.add(() -> {
+                    // Call vehcile book service with random user id and same location
+                    // Check if only 5 threads are able to book
+                    return "Done";
+                });
+            }
+
+            WORKER_THREAD_POOL.invokeAll(tasks);
+            WORKER_THREAD_POOL.shutdown();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test

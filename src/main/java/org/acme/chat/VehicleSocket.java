@@ -48,7 +48,7 @@ public class VehicleSocket {
 
     @OnMessage
     public void onMessage(String message, @PathParam("username") String username) {
-        //broadcast(">> " + username + ": " + message);
+        broadcast(">> " + username + ": " + message);
     }
 
     private void broadcast(String message) {
