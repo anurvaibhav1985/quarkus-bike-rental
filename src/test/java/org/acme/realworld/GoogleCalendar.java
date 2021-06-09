@@ -50,16 +50,15 @@ public class GoogleCalendar {
         // depending on whether 
 
 
-        // 5. LOgest consecutive sequence , after sorting this becomes a ongest subarray with consective nos
+        // 5. LOgest consecutive sequence , after sorting this becomes a 
+        // longest subarray with consective nos
         // {9,1,4,7,3,-1,0,5,8,-1,6}
         int a[] = {9,1,4,7,3,-1,0,5,8,-1,6};
         Arrays.sort(a);
         // Keep 2 pointers , as soon as you find two elemsnts differing by 1 keep i stable and see if you can move j as much as poissble
         // Once the seqeunec breaks , move i to j+1 and search continues , print the sequence found when it breaks
         // Arrays.copyOfRange(original, from, to) - subarray of original array
-        for (int i : a) {
-            
-        }
+     
 
 
 

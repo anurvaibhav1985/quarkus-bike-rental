@@ -75,20 +75,15 @@
     <artifactId>commons-text</artifactId>
     <version>1.9</version>
 </dependency>
-<dependency>
-  <groupId>com.scalified</groupId>
-  <artifactId>tree</artifactId>
-  <version>0.2.5</version>
-</dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-arc</artifactId>
-    </dependency>
-    <dependency>
+  <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.20</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-arc</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>

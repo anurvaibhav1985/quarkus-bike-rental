@@ -82,6 +82,9 @@ public class SnippetsMain {
         System.out.println("Length of the longest substring: " + findLength("araaci", 1));
         System.out.println("Length of the longest substring: " + findLength("cbbebi", 3));
 
+
+        // DFS 
+
     }
 
     public static int findLength(String str, int k) {
@@ -129,6 +132,8 @@ public class SnippetsMain {
             findCombinations(keypad, input, c + result, index - 1);
         }
     }
+
+
  
 
 }

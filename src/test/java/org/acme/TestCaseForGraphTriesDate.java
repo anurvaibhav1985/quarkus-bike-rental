@@ -33,34 +33,6 @@ public class TestCaseForGraphTriesDate {
         // than 3 requests , reject
     }
 
-    // Tries
-    @Test
-    public void testLookUp() {
-        Trie<String, Integer> t = new PatriciaTrie<Integer>();
-        t.put("vicky", 1);
-        t.put("vishzl", 1);
-        t.put("vishnu", 5);
-        t.put("vishwa", 2);
-
-        // Comparator<Map.Entry> sort = Comparator.comparing(Map.Entry::getValue);
-
-        SortedMap<String, Integer> searches = t.prefixMap("vis");
-
-        // Sort by map value desc
-        HashMap<String, Integer> temp = searches.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-        // Collections.sort(searches,Comparators.compari);
-        temp.entrySet().stream().forEach(k -> System.out.println(k.getKey() + "," + k.getValue()));
-
-        // Put them into sorted set in redis , This is time series , if we have more
-        // than 3 requests , reject
-
-        // Whenevr someone searches a term put that to map increment the count of its
-        // searhc
-        // Now ranking can be based on search popularity
-    }
-
     // Jgrap test , DFS , BFS , shortest path etc- try wikiracer
     @Test
     public void testGraphs() {
@@ -81,7 +53,6 @@ public class TestCaseForGraphTriesDate {
         DijkstraShortestPath<String, DefaultEdge> f = new DijkstraShortestPath<>(g);
         // SHortedt path from source to destination
         System.out.println(f.getPath("1", "5").getVertexList());
-
 
         // Put them into sorted set in redis , This is time series , if we have more
         // than 3 requests , reject

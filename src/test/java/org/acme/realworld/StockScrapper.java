@@ -27,7 +27,7 @@ public class StockScrapper {
         // Kth largest(min heap) number in number stream - use min heap since it will
         // have kth largets number(min heap will have larger numberd donwstraits)
         // kth smallest number(max heap) in a number stream - use max heap (max heap
-        // will have larger numbers donwstraits)
+        // will have smaller numbers donwstraits)
 
         // K largest numbers or kth largest number
         TreeSet<Integer> sortedSet = new TreeSet<>(Comparator.reverseOrder());
